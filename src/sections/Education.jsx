@@ -83,7 +83,7 @@ export default function Education() {
                                             variant="body2"
                                             color="text.secondary"
                                         >
-                                            {edu.center} — {edu.location}
+                                            {edu.institution} — {edu.location}
                                         </Typography>
                                         <Typography
                                             variant="body2"
