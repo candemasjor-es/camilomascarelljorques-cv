@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { Box, Typography, Divider, List } from "@mui/material";
-import { motion, useInView } from "framer-motion";
+import { motion as Motion, useInView } from "framer-motion";
 import ExperienceItem from "../components/ExperienceItem";
 
 export default function Experience() {
@@ -26,7 +26,7 @@ export default function Experience() {
 
     return (
         <Box ref={ref} sx={{ p: 2 }}>
-            <motion.div
+            <Motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
@@ -58,7 +58,7 @@ export default function Experience() {
                             </List>
                         </Box>
                     ))}
-            </motion.div>
+            </Motion.div>
         </Box>
     );
 }

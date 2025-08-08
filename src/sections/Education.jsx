@@ -9,7 +9,7 @@ import {
     CardContent,
     Stack,
 } from "@mui/material";
-import { motion, useInView } from "framer-motion";
+import { motion as Motion, useInView } from "framer-motion";
 import SchoolIcon from "@mui/icons-material/School";
 
 export default function Education() {
@@ -35,7 +35,7 @@ export default function Education() {
 
     return (
         <Box ref={ref} sx={{ px: { xs: 2, md: 4 }, mt: 6 }}>
-            <motion.div
+            <Motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
@@ -98,7 +98,7 @@ export default function Education() {
                         </Stack>
                     </Box>
                 ))}
-            </motion.div>
+            </Motion.div>
         </Box>
     );
 }

@@ -1,6 +1,6 @@
 // src/components/PracticeItem.jsx
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import {
     Paper,
     Typography,
@@ -12,7 +12,7 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 
 export default function PracticeItem({ practice }) {
     return (
-        <motion.div
+        <Motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,6 +63,6 @@ export default function PracticeItem({ practice }) {
                     />
                 </ListItem>
             </Paper>
-        </motion.div>
+        </Motion.div>
     );
 }

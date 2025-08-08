@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { Box, Typography, Card, CardContent, List } from "@mui/material";
-import { motion, useInView } from "framer-motion";
+import { motion as Motion, useInView } from "framer-motion";
 import PracticeItem from "../components/PracticeItem";
 
 export default function Practices() {
@@ -31,7 +31,7 @@ export default function Practices() {
 
     return (
         <Box ref={ref} sx={{ px: { xs: 2, md: 4 }, mt: 6 }}>
-            <motion.div
+            <Motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
@@ -78,7 +78,7 @@ export default function Practices() {
                         </Card>
                     ))}
                 </Box>
-            </motion.div>
+            </Motion.div>
         </Box>
     );
 }

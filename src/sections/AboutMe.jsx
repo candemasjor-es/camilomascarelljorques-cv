@@ -8,7 +8,7 @@ import {
     Avatar,
     Button,
 } from "@mui/material";
-import { motion, useInView } from "framer-motion";
+import { motion as Motion, useInView } from "framer-motion";
 import avatar from "../assets/avatar.jpeg";
 
 export default function AboutMe() {
@@ -17,7 +17,7 @@ export default function AboutMe() {
 
     return (
         <Box ref={ref} sx={{ p: 2 }}>
-            <motion.div
+            <Motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -74,7 +74,7 @@ export default function AboutMe() {
                         </Button>
                     </Box>
                 </Paper>
-            </motion.div>
+            </Motion.div>
         </Box>
     );
 }
