@@ -1,6 +1,6 @@
 // src/components/ExperienceItem.jsx
 import React from "react";
-import { motion } from "framer-motion";
+import { motion as Motion } from "framer-motion";
 import {
     Paper,
     Typography,
@@ -12,7 +12,7 @@ import WorkIcon from "@mui/icons-material/Work";
 
 export default function ExperienceItem({ exp, delay = 0 }) {
     return (
-        <motion.div
+        <Motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -63,6 +63,6 @@ export default function ExperienceItem({ exp, delay = 0 }) {
                     />
                 </ListItem>
             </Paper>
-        </motion.div>
+        </Motion.div>
     );
 }
