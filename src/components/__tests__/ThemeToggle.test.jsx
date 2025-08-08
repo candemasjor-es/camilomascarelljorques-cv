@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import { test, expect } from 'vitest';
 import userEvent from '@testing-library/user-event';
 import { useState } from 'react';
 import ThemeToggle from '../ThemeToggle';
