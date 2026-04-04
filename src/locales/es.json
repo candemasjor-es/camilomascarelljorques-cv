@@ -1,0 +1,18 @@
+{
+    "nav": {
+        "about": "Sobre mí",
+        "experience": "Experiencia",
+        "practices": "Prácticas",
+        "education": "Educación",
+        "skills": "Habilidades"
+    },
+    "about": {
+        "professional": "Especialista en desarrollo multimedia y web con más de 3 años de experiencia. También experto en informática y telecomunicaciones.",
+        "communication": "Como persona sorda, agradezco que la comunicación se realice a través de mensajes o correos electrónicos.",
+        "interview_notice": "Para concertar una entrevista, ruego me avisen con al menos 48 horas de antelación para poder gestionar la solicitud de intérprete."
+    },
+    "about.title": "Sobre mí",
+    "experience.title": "Experiencia Profesional",
+    "education.title": "Educación",
+    "contact.button": "Contactar"
+}

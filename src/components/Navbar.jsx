@@ -18,14 +18,8 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
-
-const navItems = [
-    { label: "Sobre mí", path: "/" },
-    { label: "Experiencia", path: "/experience" },
-    { label: "Prácticas", path: "/practices" },
-    { label: "Educación", path: "/education" },
-    { label: "Habilidades", path: "/skills" },
-];
+import LanguageToggle from "./LanguageToggle";
+import { useTranslation } from "react-i18next";
 
 export default function Navbar() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -34,6 +28,15 @@ export default function Navbar() {
     const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
     const handleDrawerToggle = () => setDrawerOpen(!drawerOpen);
+
+    const { t } = useTranslation();
+    const navItems = [
+        { label: t("nav.about"), path: "/" },
+        { label: t("nav.experience"), path: "/experience" },
+        { label: t("nav.practices"), path: "/practices" },
+        { label: t("nav.education"), path: "/education" },
+        { label: t("nav.skills"), path: "/skills" },
+    ];
 
     const drawer = (
         <Box
@@ -125,7 +128,10 @@ export default function Navbar() {
                         </Box>
                     )}
 
-                    <ThemeToggle />
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                        <ThemeToggle />
+                        <LanguageToggle />
+                    </Box>
                 </Toolbar>
             </AppBar>
 

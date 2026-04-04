@@ -1,0 +1,18 @@
+{
+    "nav": {
+        "about": "About Me",
+        "experience": "Experience",
+        "practices": "Practices",
+        "education": "Education",
+        "skills": "Skills"
+    },
+    "about": {
+        "professional": "Specialist in multimedia and web development with more than 3 years of experience. He is also an expert in computer science and telecommunications.",
+        "communication": "As a deaf person, I appreciate that communication is done through messages or emails.",
+        "interview_notice": "To arrange an interview, please let me know at least 48 hours in advance so that I can process the request for an interpreter."
+    },
+    "about.title": "About Me",
+    "experience.title": "Professional Experience",
+    "education.title": "Education",
+    "contact.button": "Contact"
+}

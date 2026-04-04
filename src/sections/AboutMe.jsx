@@ -10,10 +10,12 @@ import {
 } from "@mui/material";
 import { motion as Motion, useInView } from "framer-motion";
 import avatar from "../assets/avatar.jpeg";
+import { useTranslation } from "react-i18next";
 
 export default function AboutMe() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-50px" });
+    const { t } = useTranslation();
 
     return (
         <Box ref={ref} sx={{ p: 2 }}>
@@ -23,7 +25,7 @@ export default function AboutMe() {
                 transition={{ duration: 0.6, ease: "easeOut" }}
             >
                 <Typography variant="h4" gutterBottom>
-                    📘 Sobre mí
+                    📘 {t("about.title")}
                 </Typography>
 
                 <Paper elevation={3} sx={{ p: 4, mt: 2 }}>
@@ -43,18 +45,13 @@ export default function AboutMe() {
                     </Box>
 
                     <Typography paragraph align="center">
-                        💻 Especialista en desarrollo multimedia y web con más
-                        de 3 años de experiencia. También experto en informática
-                        y telecomunicaciones.
+                        💻 {t("about.professional")}
                     </Typography>
                     <Typography paragraph align="center">
-                        🧏‍♂️ Como persona sorda, agradezco que la comunicación se
-                        realice a través de mensajes o correos electrónicos.
+                        🧏‍♂️ {t("about.communication")}
                     </Typography>
                     <Typography paragraph align="center">
-                        📅 Para concertar una entrevista, ruego me avisen con al
-                        menos 48 horas de antelación para poder gestionar la
-                        solicitud de intérprete.
+                        📅 {t("about.interview_notice")}
                     </Typography>
 
                     <Box
